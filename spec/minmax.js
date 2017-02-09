@@ -19,12 +19,20 @@ var findMinMax = require('../src/library.js').findMinMax;
         expect(findMinMax([4, 66, 6, 44, 7, 78, 8, 68, 2])).toEqual([2, 78]);
       });
 
+      it('should return [9, 100] for [10, 88, 100, 9]', function () {
+        expect(findMinMax([10, 88, 100, 9])).toEqual([9, 100]);
+      });
+
     });
 
     describe('Return the number in the list in a new list follows `[min]` when the number is the min and max number in that list', function () {
 
       it('should return [4] for [4, 4, 4, 4]', function () {
         expect(findMinMax([4, 4, 4, 4])).toEqual([4]);
+      });
+
+      it('should return [100] for [100, 100, 100]', function () {
+        expect(findMinMax([100, 100, 100])).toEqual([100]);
       });
 
     });
