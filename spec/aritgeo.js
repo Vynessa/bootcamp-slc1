@@ -19,6 +19,18 @@ var aritGeo = require('../src/library.js').aritGeo;
         expect(aritGeo([2, 4, 6, 8, 10])).toEqual('Arithmetic');
       });
 
+      it("should return `Arithmetic` for [3, 6, 9, 12, 15]", function() {
+        expect(aritGeo([3, 6, 9, 12, 15])).toEqual('Arithmetic');
+      });
+
+	  it("should return `Arithmetic` for [11, 22, 33, 44, 55, 66, 77, 88, 99, 110]", function() {
+        expect(aritGeo([11, 22, 33, 44, 55, 66, 77, 88, 99, 110])).toEqual('Arithmetic');
+      });
+
+	  it("should return `Arithmetic` for [1, 8, 15, 22]", function() {
+        expect(aritGeo([1, 8, 15, 22])).toEqual('Arithmetic');
+      });
+
       it("should return `Arithmetic` for [5, 11, 17, 23, 29, 35, 41]", function() {
         expect(aritGeo([5, 11, 17, 23, 29, 35, 41])).toEqual('Arithmetic');
       });
@@ -41,6 +53,14 @@ var aritGeo = require('../src/library.js').aritGeo;
 
       it("should return `Geometric` for [−128, 64, −32, 16, −8]", function() {
         expect(aritGeo([-128, 64, -32, 16, -8])).toEqual('Geometric');
+      });
+
+      it("should return `Geometric` for [-64, -16, -4]", function() {
+        expect(aritGeo([-64, -16, -4])).toEqual('Geometric');
+      });
+
+      it("should return `Geometric` for [-44, -22, -11]", function() {
+        expect(aritGeo([-44, -22, -11])).toEqual('Geometric');
       });
 
     });
