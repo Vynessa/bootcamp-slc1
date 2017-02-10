@@ -45,7 +45,7 @@ module.exports = {
 	   }
 	},
 
-	aritGeo: function () {
+	aritGeo: function (arr) {
 	  var isArit = true;
 	  var isGeo = true;
 	  
@@ -54,33 +54,35 @@ module.exports = {
 
 	  if (arr.length === 0)
 	  {
-	    return 0;
+	  	return 0;
 	  }
 	  
-	  for (var i = 1; i <= arr.length; i++)
+	  for (var i = 1; i < arr.length; i++)
 	  {
 	    if (arr[i] - arr[i-1] !== diff)
 	    {
 	      isArit = false;
 	    }
 	    
-	    if (isArit)
-	    {
-	      return "Arithmetic";
-	    }
-	      
 	    if (arr[i]/arr[i-1] !== ratio)
 	    {
 	      isGeo = false;
 	    }
-	      
-	    if (isGeo)
-	    {
-	      return "Geometric";
-	    }
-	    
-	    return -1;
 	  }
+	  
+  	 if (isArit === true)
+  	   {
+  	     return "Arithmetic";
+  	   }
+  	      
+  	 if (isGeo === true)
+  	   {
+  	     return "Geometric";
+  	   }
+	    
+	   else {
+	    return -1;
+	   }
 	}
 	
 };
